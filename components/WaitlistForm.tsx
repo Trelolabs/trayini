@@ -12,20 +12,21 @@ export default function WaitlistForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 w-full">
       <input
         type="email"
         required
-        placeholder="Enter your work email"
+        placeholder="your@email.com"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="w-full rounded-lg bg-slate-950 border border-slate-700 px-4 py-3 text-white placeholder-slate-500 outline-none transition focus:border-violet-500 focus:ring-1 focus:ring-violet-500"
+        className="w-80 rounded-full bg-[#1C1817]/60 border border-[#3A2E2A] px-6 py-3.5 text-white placeholder-gray-500 outline-none transition focus:border-[#E96633]"
       />
       <button
         type="submit"
-        className="w-full rounded-lg bg-violet-600 px-4 py-3 text-sm font-semibold text-white transition hover:bg-violet-500"
+        className="rounded-full bg-[#B3522C] hover:bg-[#9A4625] text-white px-8 py-3.5 text-sm font-semibold transition uppercase tracking-wider flex items-center justify-center gap-2"
       >
-        Join the Waitlist
+        Join Waitlist
+        <span>&rarr;</span>
       </button>
     </form>
   );
